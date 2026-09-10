@@ -67,8 +67,8 @@ export default function FraudRisk() {
               <XAxis dataKey="month" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 11 }} />
               <Tooltip />
-              <Line type="monotone" dataKey="suspicious" stroke="#ef4444" strokeWidth={2.5} dot={false} name="Suspicious (Rs L)" />
-              <Line type="monotone" dataKey="legitimate" stroke="#10b981" strokeWidth={2} dot={false} name="Cleared (Rs L)" />
+              <Line type="monotone" dataKey="expenditure" stroke="#ef4444" strokeWidth={2.5} dot={false} name="Expenditure (Rs L)" />
+              <Line type="monotone" dataKey="allocation" stroke="#10b981" strokeWidth={2} dot={false} name="Allocation (Rs L)" />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -79,7 +79,7 @@ export default function FraudRisk() {
               <XAxis dataKey="month" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 11 }} />
               <Tooltip />
-              <Bar dataKey="suspicious" fill="#f59e0b" radius={[4, 4, 0, 0]} name="Spike volume" />
+              <Bar dataKey="expenditure" fill="#f59e0b" radius={[4, 4, 0, 0]} name="Expenditure volume" />
             </BarChart>
           </ResponsiveContainer>
         </div>

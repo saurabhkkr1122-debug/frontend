@@ -15,7 +15,7 @@ export default function ProjectProfile() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    Promise.all([fetch(`/api/projects?id=${id}`).then((r) => r.json()), fetch('/api/alerts').then((r) => r.json())])
+    Promise.all([fetch(`/api/projects/${id}`).then((r) => r.json()), fetch('/api/alerts').then((r) => r.json())])
       .then(([proj, alerts]) => {
         const row = Array.isArray(proj) ? proj[0] : proj;
         if (!row?.id) { setError('Project not found.'); return; }

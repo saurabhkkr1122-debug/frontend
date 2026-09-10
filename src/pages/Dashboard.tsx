@@ -43,7 +43,7 @@ export default function Dashboard() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    Promise.all([fetch('/api/projects').then((r) => r.json()), fetch('/api/dashboard-stats').then((r) => r.json())])
+    Promise.all([fetch('/api/projects').then((r) => r.json()), fetch('/api/dashboard/stats').then((r) => r.json())])
       .then(([p, s]) => { setProjects(Array.isArray(p) ? p : []); setStats(s); })
       .catch(() => setError('Could not load dashboard data. Please retry.'))
       .finally(() => setLoading(false));

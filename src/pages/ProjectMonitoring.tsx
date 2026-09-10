@@ -36,7 +36,7 @@ export default function ProjectMonitoring() {
 
   const remove = async (id: number) => {
     if (!confirm('Delete this project record?')) return;
-    await fetch('/api/projects', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
+    await fetch(`/api/projects/${id}`, { method: 'DELETE' });
     fetchAll();
   };
 
